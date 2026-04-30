@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { RiMenuFill } from "react-icons/ri";
+import { MdClose } from "react-icons/md";
+
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -19,13 +22,13 @@ const Navbar = () => {
       </ul>
       <div className="block md:hidden">
         {nav ? (
-          <button className="btn bg-amber-700" onClick={handleNav}>
-            _exit_
-          </button>
+          <div onClick={handleNav}>
+            <MdClose size={20} />
+          </div>
         ) : (
-          <button className="btn bg-amber-700" onClick={handleNav}>
-            _o_
-          </button>
+          <div className="hover:cursor-pointer" onClick={handleNav}>
+            <RiMenuFill size={20} />
+          </div>
         )}
       </div>
       <div
