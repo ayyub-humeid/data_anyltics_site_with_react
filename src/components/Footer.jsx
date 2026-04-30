@@ -1,4 +1,11 @@
 import React from "react";
+import {
+  FaDribbbleSquare,
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaInstagram,
+  FaTwitterSquare,
+} from "react-icons/fa";
 
 function Footer() {
   return (
@@ -12,11 +19,11 @@ function Footer() {
           voluptates quasi possimus?
         </p>
         <div className="flex md:w-[75%] justify-between my-6">
-          <p>fs</p>
-          <p>in</p>
-          <p>twi</p>
-          <p>github</p>
-          <p>Drible</p>
+          <FaFacebookSquare size={30} className="hover:cursor-pointer" />
+          <FaInstagram size={30} className="hover:cursor-pointer" />
+          <FaTwitterSquare size={30} className="hover:cursor-pointer" />
+          <FaGithubSquare size={30} className="hover:cursor-pointer" />
+          <FaDribbbleSquare size={30} className="hover:cursor-pointer" />
         </div>
       </div>
       <div className="lg:col-span-2 flex justify-between mt-6">
