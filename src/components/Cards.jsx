@@ -1,35 +1,22 @@
 import React from "react";
 import hero from "../assets/hero.png";
-// import cards from "../servieces/cards";
+import cards from "../servieces/cards";
 
 const Cards = () => {
   return (
     <div className="bg-white w-full py-[10rem] px-4 ">
       <div className="grid md:grid-cols-3 gap-8 max-w-[1240px] mx-auto">
-        <Card
-          allowedUser={1}
-          type={"Single User"}
-          price={49}
-          space={500}
-          spaceType={"GB"}
-          sendingUpSpace={5}
-        />
-        <Card
-          allowedUser={3}
-          type={"Partnership"}
-          price={149}
-          space={1}
-          sendingUpSpace={1}
-          isDarkBtn={true}
-          isGray={true}
-        />
-        <Card
-          allowedUser={1}
-          type={"Group Account"}
-          price={299}
-          space={3}
-          sendingUpSpace={15}
-        />
+        {cards.map((card, index) => (
+          <Card
+            key={index}
+            allowedUser={card.allowedUser}
+            type={card.type}
+            price={card.price}
+            space={card.space}
+            spaceType={card.spaceType}
+            sendingUpSpace={card.sendingUpSpace}
+          />
+        ))}
       </div>
     </div>
   );
