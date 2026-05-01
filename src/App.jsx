@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Analytics from "./components/Analytics";
 import Newsletter from "./components/Newsletter";
 import Cards from "./components/Cards";
+import Services from "./components/Services";
 import Footer from "./components/Footer";
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
       <Navbar />
       <Hero />
       <Analytics />
+      <Services />
       <Newsletter />
       <Cards />
       <Footer />
